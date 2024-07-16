@@ -5,11 +5,11 @@ half box
 1bag
 Side
 胡蘿蔔
-
+1pc
 馬鈴薯
-
+1pc
 花椰菜
-
+2pc
 日式菲力炸豬排
 1pc
 Season
