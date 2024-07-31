@@ -1,0 +1,4 @@
+train: object_detect/train/images
+val: object_detect/valid/images
+nc = 2
+names: ['starling', 'chicken']
