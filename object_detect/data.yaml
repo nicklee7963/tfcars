@@ -1,4 +1,4 @@
-train: object_detect/train/images
-val: object_detect/valid/images
-nc = 2
+train: D:/opencv_python/tfcars/object_detect/train/images
+val: D:/opencv_python/tfcars/object_detect/valid/images
+nc: 2
 names: ['starling', 'chicken']
