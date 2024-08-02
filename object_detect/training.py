@@ -11,6 +11,5 @@ model.train(
     imgsz=640,
     batch=8,
     project='runs/train',
-    name='yolov8_experiment',
-    
+    name='yolov8_experiment',    
 )
