@@ -1,0 +1,13 @@
+this folder uses ikpy to test robotic arm
+
+ikpy.py: to calculate the angle to move to a specfic place
+move.ino: uses serial to get info from ikpy.py and makes motor to move
+
+pip install ikpy
+pip install pyserial
+
+
+
+***********
+test times:
+success: no 
