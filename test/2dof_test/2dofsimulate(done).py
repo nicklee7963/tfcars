@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 设定手臂段长度
-L1 = 75
-L2 = 75
+L1 = 100
+L2 = 50
 
 def calculate_joint_angles(x, y):
     # 计算目标点到原点的距离
@@ -65,8 +65,8 @@ def plot_arm(theta1, theta2, x_target, y_target):
     plt.show()
 
 # 目标位置
-x_target = 130
-y_target = 30
+x_target = 100
+y_target = 50
 
 # 计算关节角度
 theta1, theta2 = calculate_joint_angles(x_target, y_target)
