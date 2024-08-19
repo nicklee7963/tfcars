@@ -65,8 +65,8 @@ def plot_arm(theta1, theta2, x_target, y_target):
     plt.show()
 
 # 目标位置
-x_target = 100
-y_target = 50
+x_target = 130
+y_target = 20
 
 # 计算关节角度
 theta1, theta2 = calculate_joint_angles(x_target, y_target)
