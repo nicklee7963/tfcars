@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 #include "HX711.h"
 #include <SPI.h>
 #include <Wire.h>

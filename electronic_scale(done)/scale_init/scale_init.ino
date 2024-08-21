@@ -2,7 +2,7 @@
 
 const int DT_PIN = 7;
 const int SCK_PIN = 6;
-const int sample_weight = 93.1;
+const int sample_weight = 62;
 
 HX711 scale;
 
