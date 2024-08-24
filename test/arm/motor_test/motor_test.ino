@@ -15,7 +15,7 @@ void loop() {
   // 在此例程中，我們不需要loop的內容
   myServo.write(180);
   delay(3000);
-  myServo.write(110);
+  myServo.write(-180);
   delay(3000);
 
  

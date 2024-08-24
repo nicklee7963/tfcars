@@ -1,6 +1,5 @@
 {
-    "configuration": "cpu=atmega2560",
-    "board": "arduino:avr:mega",
-    "port": "COM17",
-    "sketch": "lazer\\lazer.ino"
+    "board": "arduino:avr:uno",
+    "port": "COM10",
+    "sketch": "test\\arm\\motor_test\\motor_test.ino"
 }
