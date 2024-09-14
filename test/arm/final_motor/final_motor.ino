@@ -18,10 +18,15 @@ Servo myServo4;
 Servo myServo5;
 
 
-const int initial_degree[6] = [ , , , , , ];
-int current_degree[6] = [ , , , , , ];
-
+const int initial_degree[6] = [0 ,135 ,130 ,0 ,0 ,gripper_open ];
+int current_degree[6];
+const int before_degree[6] = [0,45,70,80,160,gripper_open];
+const int after_degree[6] = [0,135,60,10,160,gripper_open];
 void initial();
+
+void current(int move[6]; current_degree){
+  current_degree = move;
+}
 
 void setup() {
   // 將伺服馬達連接到Arduino的9號引腳
@@ -33,7 +38,7 @@ void setup() {
   myServo5.attach(servo5_pin);
 
   initial();
-  // 設置伺服馬達角度為90度
+  
   
   
 }
@@ -46,30 +51,33 @@ void initial(){
   myServo3.write(initial_degree[3]);
   myServo4.write(initial_degree[4]);
   myServo5.write(initial_degree[5]);
+  current(initial_degree);
 }
 
 
 
-int slow_move(final, pin)
+int slow_move(int move[6])
 {
-  for(;current_degree[pin] < final; current_degree[pin] += 5)
-  {
-    delay(10); 
+  for(int i = 1; i < 5; i++){
+    int gap = move[i] - current_degree[i];
+    
   }
+  
 
 }
  
 bool is_detected(){
-  pass
+  pass;
 }
 
 void grip(){
+  myServo5.write(gripper_close);
   
 }
 
 void loop() {
 
-  myServo0.write(current_degree[servo0_pin]);
+  
   myServo1.write(current_degree[servo1_pin]);
   myServo2.write(current_degree[servo2_pin]);
   myServo3.write(current_degree[servo3_pin]);
