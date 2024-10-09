@@ -9,7 +9,7 @@ HX711 scale;
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(9600);
+  Serial.begin(115200);
   scale.begin(DT_PIN, SCK_PIN);
   scale.set_scale();
   scale.tare();

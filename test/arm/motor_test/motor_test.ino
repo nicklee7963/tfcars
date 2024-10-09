@@ -5,7 +5,7 @@ Servo myServo;
 
 void setup() {
   // 將伺服馬達連接到Arduino的9號引腳
-  myServo.attach(6);
+  myServo.attach(11);
   // 設置伺服馬達角度為90度
   
   
@@ -13,10 +13,11 @@ void setup() {
 
 void loop() {
   // 在此例程中，我們不需要loop的內容
-  myServo.write(120);
-  delay(3000);
-  myServo.write(50);
-  delay(3000);
+  myServo.write(0);
+  delay(1000);
+  myServo.write(180);
+  delay(1000);
+  
 
  
   
