@@ -4,7 +4,7 @@
 const int DT_PIN = 7;
 const int SCK_PIN = 6;
 const int confidence = 2;
-const int scale_factor = -669;
+const int scale_factor = 725;
 const int heavy = 64;  //blue
 const int medium = 50;   //green
 const int light = 33;   //red

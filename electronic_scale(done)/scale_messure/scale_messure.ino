@@ -2,7 +2,7 @@
 const int DT_PIN = 7;
 const int SCK_PIN = 6;
 
-const int scale_factor = -669;
+const int scale_factor = -12;
 
 HX711 scale;
 

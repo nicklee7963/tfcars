@@ -1,4 +1,5 @@
 #include <Servo.h>
+bool completea = 0;
 bool completeb = 0;
 Servo myServo0;
 Servo myServo1;
@@ -15,10 +16,13 @@ void goose();
 void grip(int grip);
 void moveServoGradually(Servo servo, int startPos, int endPos, int stepDelay);
 void chicken(){
-  moveServoGradually(myServo0, myServo0.read(), 90, 20);
+  moveServoGradually(myServo4, myServo4.read(), 100, 20);
+  myServo5.write(180);
+  moveServoGradually(myServo0, myServo0.read(), 100, 20);
+  
   before();
   delay(1000);
-  myServo5.write(0);
+  myServo5.write(80);
   delay(500);
   after_before();
   delay(1000);
@@ -28,14 +32,13 @@ void chicken(){
   myServo4.write(0);
   myServo3.write(0);
   delay(500);
-  myServo5.write(180);
-  delay(1000);
+  
 }
 void goose(){
     moveServoGradually(myServo4, myServo4.read(), 10, 20);
   moveServoGradually(myServo2, myServo2.read(), 60, 20);
   delay(500);
-  myServo5.write(0);
+  myServo5.write(80);
   delay(500);
   moveServoGradually(myServo2, myServo2.read(), 0, 20);
   delay(500);
@@ -68,7 +71,7 @@ void initial_setup(){
     myServo2.write(0);
     myServo3.write(0);
     myServo4.write(20);
-    myServo5.write(180);
+    myServo5.write(80);
 
 
 }
@@ -148,9 +151,13 @@ void loop(){
   if (Serial.available() > 0) { // 檢查是否有數據可讀
     char received = Serial.read(); // 讀取接收到的數據
 
-    if (received == '1'&&completeb == 0) {
-        completeb = 1;
+    if (received == 'P'&&completea == 0) {
+        completea = 1;
         goose();
+    }
+    if (received == 'p'&&completeb == 0){
+        completeb =1;
+        chicken();
     }
   }
   
