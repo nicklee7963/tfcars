@@ -9,6 +9,7 @@ const int heavy = 64;  //blue
 const int medium = 50;   //green
 const int light = 33;   //red
 int digitnum = 1;
+int rer = 0;
 HX711 scale;
 LiquidCrystal_I2C lcd(0x27, 16, 2); 
 
@@ -69,8 +70,9 @@ void loop()
       // Serial.println(success);
       delay(500);
     }
-    if (success == confidence){
+    if (success == confidence&&rer == 0){
       Serial.println("blue");
+      rer = 1;
     }
     
   }
@@ -85,8 +87,9 @@ void loop()
       // Serial.println(success);
       delay(500);
     }
-    if (success == confidence){
+    if (success == confidence&&rer == 0){
       Serial.println("green");
+      rer = 1;
     }
     
   }
@@ -101,8 +104,9 @@ void loop()
       // Serial.println(success);
       delay(500);
     }
-    if (success == confidence){
+    if (success == confidence&&rer == 0){
       Serial.println("red");
+      rer = 1;
     }
     
   }
