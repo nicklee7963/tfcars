@@ -7,22 +7,24 @@ ser = serial.Serial('COM18', 9600)  # 替換為你的端口
 send_ser = serial.Serial('COM10', 9600, timeout=1)  # 發送到另一個 Arduino 的端口
 
 # 定義藍色的 HSV 顏色範圍，並加上誤差
-blue_hue = 93
-blue_saturation = 248
-blue_value = 211
-blue_hue_range = 20
-blue_saturation_range = 50
-blue_value_range = 50
+# blue_hue = 93
+# blue_saturation = 248
+# blue_value = 211
+# blue_hue_range = 20
+# blue_saturation_range = 50
+# blue_value_range = 50
 
 lower_blue = np.array([
-    max(blue_hue - blue_hue_range, 0), 
-    max(blue_saturation - blue_saturation_range, 0), 
-    max(blue_value - blue_value_range, 0)
+    # max(blue_hue - blue_hue_range, 0), 
+    # max(blue_saturation - blue_saturation_range, 0), 
+    # max(blue_value - blue_value_range, 0)
+    90,0,0
 ])
 upper_blue = np.array([
-    min(blue_hue + blue_hue_range, 179), 
-    min(blue_saturation + blue_saturation_range, 255), 
-    min(blue_value + blue_value_range, 255)
+    # min(blue_hue + blue_hue_range, 179), 
+    # min(blue_saturation + blue_saturation_range, 255), 
+    # min(blue_value + blue_value_range, 255)
+    110,255,255
 ])
 
 # 定義綠色的 HSV 顏色範圍
@@ -54,25 +56,29 @@ red_saturation_range = 50
 red_value_range = 50
 
 lower_red1 = np.array([
-    max(red_hue1 - red_hue_range, 0), 
-    max(red_saturation - red_saturation_range, 0), 
-    max(red_value - red_value_range, 0)
+    # max(red_hue1 - red_hue_range, 0), 
+    # max(red_saturation - red_saturation_range, 0), 
+    # max(red_value - red_value_range, 0)
+    0,0,0
 ])
 upper_red1 = np.array([
-    min(red_hue1 + red_hue_range, 179), 
-    min(red_saturation + red_saturation_range, 255), 
-    min(red_value + red_value_range, 255)
+    # min(red_hue1 + red_hue_range, 179), 
+    # min(red_saturation + red_saturation_range, 255), 
+    # min(red_value + red_value_range, 255)
+    5,255,255
 ])
 
 lower_red2 = np.array([
-    max(red_hue2 - red_hue_range, 0), 
-    max(red_saturation - red_saturation_range, 0), 
-    max(red_value - red_value_range, 0)
+    # max(red_hue2 - red_hue_range, 0), 
+    # max(red_saturation - red_saturation_range, 0), 
+    # max(red_value - red_value_range, 0)
+    175,0,0
 ])
 upper_red2 = np.array([
-    min(red_hue2 + red_hue_range, 179), 
-    min(red_saturation + red_saturation_range, 255), 
-    min(red_value + red_value_range, 255)
+    # min(red_hue2 + red_hue_range, 179), 
+    # min(red_saturation + red_saturation_range, 255), 
+    # min(red_value + red_value_range, 255)
+    180,255,255
 ])
 
 # 開始攝影機

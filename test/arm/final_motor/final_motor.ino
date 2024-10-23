@@ -16,10 +16,11 @@ void goose();
 void grip(int grip);
 void moveServoGradually(Servo servo, int startPos, int endPos, int stepDelay);
 void chicken(){
-  moveServoGradually(myServo3, myServo3.read(), 20, 20);
+  
+  moveServoGradually(myServo3, myServo3.read(), 25, 20);
   moveServoGradually(myServo4, myServo4.read(), 100, 20);
   myServo5.write(180);
-  moveServoGradually(myServo0, myServo0.read(), 95, 20);
+  moveServoGradually(myServo0, myServo0.read(), 110, 20);
   
   before();
   delay(1000);
@@ -36,10 +37,19 @@ void chicken(){
   
 }
 void goose(){
-    moveServoGradually(myServo4, myServo4.read(), 10, 20);
-  moveServoGradually(myServo2, myServo2.read(), 60, 20);
+  myServo5.write(170);
+  moveServoGradually(myServo0, myServo0.read(), 5 , 20);
+  moveServoGradually(myServo3, myServo3.read(), 25 , 20);
+
+  moveServoGradually(myServo4, myServo4.read(), 0, 20);
+  moveServoGradually(myServo2, myServo2.read(), 100, 20);
+  moveServoGradually(myServo3, myServo3.read(), 20 , 20);
+  moveServoGradually(myServo4, myServo4.read(), 22 , 20);
+
+
+  
   delay(500);
-  myServo5.write(80);
+  myServo5.write(0);
   delay(500);
   moveServoGradually(myServo2, myServo2.read(), 0, 20);
   delay(500);
@@ -105,14 +115,14 @@ void before(){
     // moveServoGradually(myServo3, myServo3.read(), 115, 20);  // I make it smaller, avoiding hitting the table
     // moveServoGradually(myServo2, myServo2.read(), 160, 20);
     // moveServoGradually(myServo1, myServo1.read(), 0, 20);
-    moveServoGradually(myServo4, myServo4.read(), 150, 20);
+    moveServoGradually(myServo4, myServo4.read(), 130, 20);
     moveServoGradually(myServo2, myServo2.read(), 60, 20);
     moveServoGradually(myServo3, myServo3.read(), 40, 20);
 
     moveServoGradually(myServo2, myServo2.read(), 100, 20);
     moveServoGradually(myServo3, myServo3.read(), 80, 20);
     moveServoGradually(myServo2, myServo2.read(), 140, 20);
-    moveServoGradually(myServo3, myServo3.read(), 125, 20);
+    moveServoGradually(myServo3, myServo3.read(), 110, 20);
     moveServoGradually(myServo2, myServo2.read(), 160, 20);
     moveServoGradually(myServo1, myServo1.read(), 0, 20);
     
